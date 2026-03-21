@@ -58,3 +58,7 @@
  (:class qlot/source/git:source-git
   :initargs (:remote-url "https://github.com/petebu/cffi.git")
   :version "git-dee32340c57a2195849b142e02fd09fb6a9fc6fc"))
+("deploy" .
+ (:class qlot/source/git:source-git
+  :initargs (:remote-url "https://codeberg.org/petebu/deploy.git")
+  :version "git-f565a20be9a81a46b0b6c2a4c2ed270728fa0731"))

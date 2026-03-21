@@ -1,5 +1,11 @@
 (in-package :lem-core)
 
+(setf deploy:*macos-info-plist-template*
+      (asdf:system-relative-pathname "lem" "resources/Info.plist.in"))
+
+(setf deploy:*macos-app-icon*
+      (asdf:system-relative-pathname "lem" "resources/Lem.icns"))
+
 (add-hook *after-init-hook*
           (lambda ()
             ;; PATH injection for macOS

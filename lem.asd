@@ -304,9 +304,11 @@
                "lem-skk-mode"))
 
 (defsystem "lem"
+  :long-name "Lem"
+  :author "Lem Authors"
   :version "2.3.0"
   :defsystem-depends-on ("deploy")
-  :build-operation #+os-macosx "osx-app-deploy-op" #-os-macosx "deploy-op"
+  :build-operation #+os-macosx "macos-app-deploy-op" #-os-macosx "deploy-op"
   :build-pathname "lem"
   :entry-point "lem:main"
   :depends-on ("lem-webview"
