@@ -54,3 +54,7 @@
  (:class qlot/source/git:source-git
   :initargs (:remote-url "https://github.com/lem-project/tree-sitter-cl.git")
   :version "git-bfc3471b165856a20c3379f538a00ec256785a44"))
+("cffi" .
+ (:class qlot/source/git:source-git
+  :initargs (:remote-url "https://github.com/petebu/cffi.git")
+  :version "git-dee32340c57a2195849b142e02fd09fb6a9fc6fc"))

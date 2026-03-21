@@ -2,20 +2,6 @@
   (:use :cl))
 (in-package :lem-terminal/ffi)
 
-(pushnew (asdf:system-relative-pathname
-          :lem-terminal (format nil
-                                "~(lib/~A/~A/~)"
-                                (uiop:operating-system)
-                                (uiop:architecture)))
-         cffi:*foreign-library-directories*
-         :test #'uiop:pathname-equal)
-
-(cffi:define-foreign-library terminal
-  (:unix "terminal.so"))
-
-(ignore-errors
-  (cffi:use-foreign-library terminal))
-
 (defconstant VTERM_KEY_NONE 0)
 (defconstant VTERM_KEY_ENTER 1)
 (defconstant VTERM_KEY_TAB 2)
